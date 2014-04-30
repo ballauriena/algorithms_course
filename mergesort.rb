@@ -25,19 +25,18 @@ class Mergesort
 
 		num = ary.pop 
 
-		if !sorted.empty?
+		if sorted.empty?
+			sorted << num
+		else
 			for i in 0..sorted.count
 				if num <= sorted[i] 
 					sorted.insert(i, num)
 					break
 				end
 			end
-		else
-			sorted << num
 		end
-
 		sort_array(ary, sorted)
 	end
 
-	
+
 end
