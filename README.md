@@ -1,0 +1,1 @@
+The purpose of this repo is to have a place to store my work as I complete the Coursera algorithms course. 
