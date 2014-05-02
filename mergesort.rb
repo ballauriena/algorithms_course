@@ -1,16 +1,16 @@
 class Array
   
   def round_up
-	    return (self.size)/2 + 1 if (self.size) % 2 != 0
-	    return (self.size)/2
-	end
+    return (self.size)/2 + 1 if (self.size) % 2 != 0
+    return (self.size)/2
+  end
 
 
-	def split
-		nested_array = []
-		self.each_slice(round_up){ |ary| nested_array << ary }
-		nested_array
-	end
+  def split
+    nested_array = []
+    self.each_slice(round_up){ |ary| nested_array << ary }
+    nested_array
+  end
 
   def sort_array(ary, sorted = [])
     return sorted if ary.empty?
