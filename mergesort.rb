@@ -30,7 +30,7 @@ class Array
     sort_array(ary, sorted)
   end
 
-  def merge
+  def merge_sort
     a = sort_array(split[0])
     b = sort_array(split[1])
     c = []

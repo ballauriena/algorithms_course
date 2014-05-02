@@ -34,9 +34,9 @@ describe Array do
 		end
 	end
 
-  describe "#merge" do
+  describe "#merge_sort" do
     it "merges the two half arrays in a sorted order" do
-      expect(array1.merge).to eq([1, 2, 6, 7, 8, 9, 10, 26])
+      expect(array1.merge_sort).to eq([1, 2, 6, 7, 8, 9, 10, 26])
     end
   end
 
