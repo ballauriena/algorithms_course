@@ -44,7 +44,7 @@ describe Array do
       expect(array1.merge_sort).to eq([1, 2, 6, 7, 8, 9, 10, 26])
     end
 
-    it "merges the two half arrays in a sorted order" do
+    it "merges the two uneven half arrays in a sorted order" do
       expect(array2.merge_sort).to eq([1, 2, 4, 6, 7, 8, 9, 10, 26])
     end
   end
