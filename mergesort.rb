@@ -13,15 +13,17 @@ class Array
 	end
 
   def sort_array(ary, sorted = [])
-    return sorted if ary.size == 0
+    return sorted if ary.empty?
 
     num = ary.pop 
 
     if sorted.empty?
       sorted << num
+    elsif num > sorted.last
+      sorted << num
     else
       for i in 0..sorted.count
-      	if num <= sorted[i] 
+      	if sorted[i] && num <= sorted[i] 
       	  sorted.insert(i, num)
       	  break
       	end
@@ -37,18 +39,12 @@ class Array
     i = 0
     j = 0
     for k in 0...self.size
-      if !a[i]
+      if !a[i] || b[j] < a[i]
         c[k] = b[j]
         j += 1
-      elsif !b[j]
+      else #!b[j] || a[i] < b[j] 
         c[k] = a[i]
         i += 1
-      elsif a[i] < b[j] 
-        c[k] = a[i]
-        i += 1
-      else
-        c[k] = b[j]
-        j += 1
       end
     end
     c

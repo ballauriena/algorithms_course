@@ -32,11 +32,20 @@ describe Array do
 			arrays = array1.split
 			expect(array1.sort_array(arrays[0])).to eq([2, 7, 9, 10])
 		end
+
+    it "sorts an odd array of numbers from least to greatest" do
+      arrays = array2.split
+      expect(array2.sort_array(arrays[0])).to eq([2, 6, 7, 9, 10])
+    end
 	end
 
   describe "#merge_sort" do
     it "merges the two half arrays in a sorted order" do
       expect(array1.merge_sort).to eq([1, 2, 6, 7, 8, 9, 10, 26])
+    end
+
+    it "merges the two half arrays in a sorted order" do
+      expect(array2.merge_sort).to eq([1, 2, 4, 6, 7, 8, 9, 10, 26])
     end
   end
 
