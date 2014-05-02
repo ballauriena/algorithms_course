@@ -17,9 +17,7 @@ class Array
 
     num = ary.pop 
 
-    if sorted.empty?
-      sorted << num
-    elsif num > sorted.last
+    if sorted.empty? || num > sorted.last
       sorted << num
     else
       for i in 0..sorted.count
