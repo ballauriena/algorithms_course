@@ -37,7 +37,7 @@ describe Array do
       arrays = array2.split
       expect(array2.sort_array(arrays[0])).to eq([2, 6, 7, 9, 10])
     end
-	end
+  end
 
   describe "#merge_sort" do
     it "merges the two half arrays in a sorted order" do
