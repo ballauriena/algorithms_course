@@ -36,8 +36,14 @@ class Array
     c = []
     i = 0
     j = 0
-    for k in 0..self.count
-      if a[i] < b[j] 
+    for k in 0...self.size
+      if !a[i]
+        c[k] = b[j]
+        j += 1
+      elsif !b[j]
+        c[k] = a[i]
+        i += 1
+      elsif a[i] < b[j] 
         c[k] = a[i]
         i += 1
       else
