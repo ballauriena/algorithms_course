@@ -24,10 +24,10 @@ describe Array do
     it  "returns two arrays that are halves of the original array when the array 
       is an odd length with the first array containing one more element than the second" do
         expect(array2.split).to eq([[7,2,9,10, 6], [8, 1, 26, 4]])
-      end
+    end
   end
 
-   describe "#sort_and_count_array" do
+  describe "#sort_and_count_array" do
     it "sorts an array of numbers from least to greatest" do
       arrays = array1.split
       expect(arrays[0].sort_and_count_array[1]).to eq([2, 7, 9, 10])
